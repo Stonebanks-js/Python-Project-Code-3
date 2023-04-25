@@ -1,0 +1,50 @@
+import random
+
+This line imports the random module in Python, which provides access to various functions for generating random numbers, selecting random items from sequences, and so on.
+
+item_list=["Rock", "Paper", "Scissor"]
+
+This line creates a list called item_list containing three strings, "Rock", "Paper", and "Scissor". These strings represent the three possible choices in the game of Rock-Paper-Scissors.
+
+user_choice = input("Your choice = Rock, Paper, Scissor = ")
+
+This line prompts the user to enter their choice for the game. The input function is used to accept user input and store it in the variable user_choice.
+
+comp_choice = random.choice(item_list)
+
+This line uses the random.choice() function to randomly select an item from the item_list and store it in the variable comp_choice. This will be the computer's choice for the game
+
+print(user_choice, comp_choice)
+
+This line prints out the user's choice and the computer's choice, which will help the user understand the outcome of the game.
+
+if user_choice == comp_choice:
+    print("Match Tie")
+    
+    This line checks if the user's choice is equal to the computer's choice. If they are the same, the game is a tie and the code prints "Match Tie".
+    
+    elif user_choice == "Rock":
+    if comp_choice == "Paper":
+        print("Paper covers Rock, Computer wins")
+    else:
+        print("Rock smashes Scissor, You won")
+        
+ This code block uses elif (short for "else if") to check if the user's choice is "Rock". If it is, the code then checks if the computer's choice is "Paper". If it is, the code prints "Paper covers Rock, Computer wins". Otherwise, the code assumes the computer's choice is "Scissor" and prints "Rock smashes Scissor, You won".
+ 
+ elif user_choice == "Paper":
+    if comp_choice == "Scissor":
+        print("Scissor cuts Paper, Computer wins")
+    else:
+        print("Paper covers Rock, You won")
+
+This code block uses elif to check if the user's choice is "Paper". If it is, the code then checks if the computer's choice is "Scissor". If it is, the code prints "Scissor cuts Paper, Computer wins". Otherwise, the code assumes the computer's choice is "Rock" and prints "Paper covers Rock, You won".
+
+
+elif user_choice == "Scissor":
+    if comp_choice == "Rock":
+        print("Rock smashes Scissor, Computer won")
+    else:
+        print("Scissor cuts Paper, You won")
+
+This code block uses elif to check if the user's choice is "Scissor". If it is, the code then checks if the computer's choice is "Rock". If it is, the code prints "Rock smashes Scissor, Computer won". Otherwise, the code assumes the computer's choice is "Paper" and prints "Scissor cuts Paper, You won".
+
